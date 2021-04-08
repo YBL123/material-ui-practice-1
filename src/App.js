@@ -70,7 +70,10 @@ const App = () => {
         <Container className={classes.cardGrid} maxWidth="md">
           <Grid container spacing={4}>
             {cards.map((card) => (
-                          <Grid item key={card}>
+                          // full space on a mobile screen = xs={12}
+                          // small devices and larger = sm ={6} half screen
+                          // bigger than medium devices = md={4} 12 /4 = 3. 3 cards per row
+                          <Grid item key={card} xs={12} sm={6} md={4}> 
                           <Card className={classes.card}>
                             <CardMedia 
                               className={classes.cardMedia}
